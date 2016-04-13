@@ -1,5 +1,5 @@
 # BugFreeCodes
-It contain codes for various Online Judge
+It contain codes for various Online Judges.
 
 The files are named according to the problem name. You can find links to the problem on the first line of most files.
 
