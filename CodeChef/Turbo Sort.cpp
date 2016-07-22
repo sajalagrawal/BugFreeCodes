@@ -2,6 +2,7 @@
 //Author - Sajal Agrawal
 //@sajalagrawal
 
+//Counting Sort algorithm
 #include <iostream>
  
 using namespace std;
