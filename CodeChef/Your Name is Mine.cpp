@@ -42,7 +42,7 @@ int main()
     return 0;
 }
 
-//same implementation with some changes
+//same implementation with some minor changes
 /*
 #include <iostream>
  
