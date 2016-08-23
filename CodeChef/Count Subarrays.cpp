@@ -2,6 +2,8 @@
 //Author - Sajal Agrawal
 //@sajalagrawal
 
+//This solution clears only Subtask 1 and 2. Will soon post solution for Subtask 3.
+
 #include <iostream>
 #include<assert.h>
 #define DRT()  int t; cin>>t; asst(t,1,5); while(t--)
