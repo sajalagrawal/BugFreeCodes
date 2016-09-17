@@ -1,4 +1,4 @@
-//https://www.codechef.com/problems/HOLES
+//https://www.codechef.com/problems/LONGSEQ
 //Author - Sajal Agrawal
 //@sajalagrawal
 
