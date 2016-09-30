@@ -1,6 +1,6 @@
 //https://www.hackerrank.com/challenges/c-tutorial-strings
 //Author - Sajal Agrawal
-//@sajalagrawal
+//sajal.agrawal1997@gmail.com
 
 #include <iostream>
 #include <string>
