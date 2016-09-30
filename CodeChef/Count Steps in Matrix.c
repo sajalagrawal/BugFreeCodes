@@ -20,7 +20,7 @@ int main() {
       }
     }
     for(i=2;i<=n*n;i++){
-      step+=fabs(x[i]-x[i-1])+fabs(y[i]-y[i-1]);
+      step+=fabs(x[i]-x[i-1])+fabs(y[i]-y[i-1]);   //or use abs() in stdlib.h header file
     }
     printf("%d\n",step);
   }
