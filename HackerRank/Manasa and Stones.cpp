@@ -1,6 +1,6 @@
 //https://www.hackerrank.com/challenges/manasa-and-stones
 //Author - Sajal Agrawal
-//@sajalagrawal
+//sajal.agrawal1997@gmail.com
 
 #include <iostream>
 #include<algorithm>
