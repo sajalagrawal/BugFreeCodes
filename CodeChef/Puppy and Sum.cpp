@@ -2,7 +2,6 @@
 //Author - Sajal Agrawal
 //@sajalagrawal
 
-
 #include <iostream>
  
 using namespace std;
