@@ -4,7 +4,7 @@
 
 #include <stdio.h>
 #include <math.h>     /* abs */
-int x[250001],y[250001];
+int x[250001],y[250001];   //as n<=500 n*n<=250000
 int main() {
   int t,n,value,step,i,j;
   scanf("%d",&t);
