@@ -1,3 +1,7 @@
+//http://www.practice.geeksforgeeks.org/problem-page.php?pid=700276
+//Author- Sajal Agrawal
+//Username:	sajalagrawal
+
 /*You are required to complete this method*/
 int max_sum(int A[],int n)
 {
