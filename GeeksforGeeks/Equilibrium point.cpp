@@ -22,6 +22,7 @@ int main() {
     	        if(sumL(a,i)==sumR(a,i,n)){
     	            cout<<(i+1)<<"\n";
     	            flag=1;
+		    break;
     	        }
     	    }
     	    if(flag==0)cout<<"-1\n";
