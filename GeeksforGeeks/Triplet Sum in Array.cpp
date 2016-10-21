@@ -15,7 +15,7 @@ int main() {
 	    flag=0;
 	    for(i=0;i<n;i++)cin>>a[i];
 	    sort(a,a+n);
-	    for(i=0;i<n;i++){
+	    for(i=0;i<n-2;i++){
 	        j=i+1;
 	        k=n-1;
 	        while(j<k){
