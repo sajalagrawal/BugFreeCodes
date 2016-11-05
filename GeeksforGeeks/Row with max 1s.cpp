@@ -55,3 +55,31 @@ int first(bool a[],int low,int high){
     }
     return -1;
 }
+
+
+//when each row of 2D array is not sorted
+#include <iostream>
+using namespace std;
+
+int main() {
+	int t,n,i,m,j;
+	cin>>t;
+	while(t--){
+	    cin>>n>>m;
+	    bool a[n][50];
+	    int index=0,max=0,count=0;
+	    for(i=0;i<n;i++){
+	        count=0;
+	        for(j=0;j<m;j++){
+	            cin>>a[i][j];
+	            if(a[i][j]==1)count++;
+	        }
+	        if(count>max){
+	            max=count;
+	            index=i;
+	        }
+	    }
+	    cout<<index<<"\n";
+	}
+	return 0;
+}
