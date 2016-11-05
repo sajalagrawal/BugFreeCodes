@@ -57,7 +57,7 @@ int first(bool a[],int low,int high){
 }
 
 
-//when each row of 2D array is not sorted
+//when rows of 2D array are not sorted
 #include <iostream>
 using namespace std;
 
