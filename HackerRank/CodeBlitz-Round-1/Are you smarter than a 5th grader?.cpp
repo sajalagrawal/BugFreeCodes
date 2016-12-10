@@ -32,7 +32,7 @@ int main(){
     cin>>t;
     while(t--){
         cin>>n;
-        cout<<pow(floor(sqrt(n)),2)<<"\n";
+        cout<<(int)pow(floor(sqrt(n)),2)<<"\n";
     }
     return 0;
 }
