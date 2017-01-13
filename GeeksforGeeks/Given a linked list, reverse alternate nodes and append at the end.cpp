@@ -14,14 +14,17 @@
 
 */
 struct node* reverse(struct node* root) {
-  struct node* new_root = 0;
-  while (root) {
-    struct node* next = root->next;
-    root->next = new_root;
-    new_root = root;
-    root = next;
+  struct node *prev,*ptr,*nxt;
+  prev=NULL;
+  ptr=root;
+  while(ptr!=NULL){
+      nxt=ptr->next;
+      ptr->next=prev;
+      prev=ptr;
+      ptr=nxt;
   }
-  return new_root;
+  root=prev;
+  return root;
 }
 
 void rearrange(struct node *odd)
