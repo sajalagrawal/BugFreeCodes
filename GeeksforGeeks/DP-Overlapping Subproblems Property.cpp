@@ -26,7 +26,6 @@ int main() {
 	// your code goes here
 	int i=0;
 	init();
-	for(;i<MAX;i++)
-	    cout<<fib(i)<<" ";
+	cout<<fib(40);
 	return 0;
 }
