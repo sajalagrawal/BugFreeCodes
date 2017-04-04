@@ -1,4 +1,5 @@
 //http://www.geeksforgeeks.org/dynamic-programming-set-1/
+//Time complexity- O(n), Space complexity- O(n)
 
 #include <bits/stdc++.h>
 using namespace std;
