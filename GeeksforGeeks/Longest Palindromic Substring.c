@@ -1,4 +1,6 @@
 //http://www.geeksforgeeks.org/longest-palindrome-substring-set-1/
+//Author - Sajal Agrawal
+//sajal.agrawal1997@gmail.com
 
 #include <stdio.h>
 #include <string.h>
@@ -22,8 +24,10 @@ void longestPalinSubstring(char str[]){
     for(i=0;i<n-1;i++){
         if(str[i]==str[i+1]){
             dp[i][i+1]=true;
-            start=i;
-            maxLen=2;
+            if(maxLen<2){    //minor correction in GeeksforGeeks code
+                    start=i;
+                    maxLen=2;
+            }
         }
     }
     for(k=3;k<=n;k++){
