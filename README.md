@@ -9,7 +9,7 @@ https://www.codechef.com/users/sajalagrawal
 
 http://www.practice.geeksforgeeks.org/user-profile.php?user=sajalagrawal
 
-https://www.hackerearth.com/@sajal1
+https://www.hackerearth.com/@agrawalsajal
 
 https://www.hackerrank.com/sajalagrawal
 
