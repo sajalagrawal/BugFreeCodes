@@ -7,11 +7,11 @@ Note : Please do not misuse these codes. You will only be cheating yourself. Thi
 
 https://www.codechef.com/users/sajalagrawal
 
+https://www.hackerrank.com/sajalagrawal
+
 http://www.practice.geeksforgeeks.org/user-profile.php?user=sajalagrawal
 
 https://www.hackerearth.com/@agrawalsajal
-
-https://www.hackerrank.com/sajalagrawal
 
 http://www.spoj.com/users/sajalagrawal/
 
