@@ -16,7 +16,7 @@ I/P = [0,1,2,3,3,5]
 O/P = 3
 0 -> 1
 1 -> 2
-2 -> 3 2 is counted only once
+2 -> 3 (3 is counted only once)
 
 I/P = [1,1,2,3]
 O/P = 3
