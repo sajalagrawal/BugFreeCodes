@@ -10,18 +10,17 @@ public:
         return actualShift(left-right, s);
     }
     
-    string actualShift(int shift, string input){
-        string str = input;
+    string actualShift(int shift, string str){
         //shift = -ve for right
         //shift = +ve for left
         if(!shift)return str;
         if(shift>0){
             shift = shift%str.size();
-            return input.substr(shift)+input.substr(0,shift);
+            return str.substr(shift)+str.substr(0,shift);
         }else{
             shift=-shift;
             shift = shift%str.size();
-            return input.substr(str.size()-shift)+input.substr(0,str.size()-shift);
+            return str.substr(str.size()-shift)+str.substr(0,str.size()-shift);
         }
     }
 };
