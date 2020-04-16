@@ -1,0 +1,33 @@
+class Solution {
+public:
+    vector<int> productExceptSelf(vector<int>& nums) {
+        vector<int> res(nums.size(),1);
+        for(int i=1;i<nums.size();i++){
+            res[i] = res[i-1] * nums[i-1];
+            cout<<res[i]<<" ";
+        }
+        int multiplier = 1;
+        for(int i=nums.size()-2;i>=0;i--){
+            multiplier *= nums[i+1];
+            res[i] *= multiplier;
+        }
+        return res;
+    }
+};
+
+/*
+2 3 4 2 3  -> 144
+72 48 36 72 48 
+
+1 1 1 1 1
+1 2 6 24 48
+       72  48 
+    
+
+1 1 1 1
+1 1  2 6
+   12  8  6
+        
+1 1 2 6
+24 12 4 1
+*/
