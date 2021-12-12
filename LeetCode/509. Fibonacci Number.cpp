@@ -1,5 +1,6 @@
 #define ll long long
 
+
 class Solution {
     ll fibo[35]={0,};
 public:
@@ -17,6 +18,7 @@ public:
         if(fibo[n]!=0){
             return fibo[n];
         }
-        return solve(n-2)+solve(n-1);
+        fibo[n] = solve(n-2)+solve(n-1);
+        return fibo[n];
     }
 };
