@@ -5,7 +5,7 @@ public:
     
     vector<int> findRedundantConnection(vector<vector<int>>& edges) {
         vector<int> parent(1005, -1);
-        vector<int> rank(1005, 0);
+        vector<int> rank(1005, 1); //initialize rank by 1?
         for(auto edge : edges){
             if(!unionByRank(edge[0], edge[1], parent, rank)){
                 return edge;
@@ -32,10 +32,10 @@ public:
 		//should check by rank[parent] instead
         if(rank[nodeA] > rank[nodeB]){
             parent[parentB] = parentA;
-            rank[parentA]++;
+            rank[parentA]++;  //rank[parentA]+=rank[parentB] ?
         }else{
             parent[parentA] = parentB;
-            rank[parentB]++;
+            rank[parentB]++;  //rank[parentB]+=rank[parentA] ?
         }
         return true;
     }
