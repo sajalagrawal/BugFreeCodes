@@ -1,6 +1,8 @@
 ////https://leetcode.com/problems/network-delay-time/
 //Dijkstra's Algorithm
 
+//lecture https://youtu.be/OGsPQy-lM1w?si=njOSssd9hkA35HVu 
+
 class Solution {
 public:
     int networkDelayTime(vector<vector<int>>& times, int n, int k) {
