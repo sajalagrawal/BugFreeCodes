@@ -29,13 +29,13 @@ public:
             //adding this edge creates a cycle;
             return false;
         }
-		//should check by rank[parent] instead
-        if(rank[nodeA] > rank[nodeB]){
+	///should check by rank[parent] instead - updated
+        if(rank[parentA] > rank[parentB]){
             parent[parentB] = parentA;
-            rank[parentA]++;  //rank[parentA]+=rank[parentB] ?
+            rank[parentA]+=rank[parentB];  //rank[parentA]+=rank[parentB] ? - updated
         }else{
             parent[parentA] = parentB;
-            rank[parentB]++;  //rank[parentB]+=rank[parentA] ?
+            rank[parentB]+=rank[parentA];  //rank[parentB]+=rank[parentA] ? - updated
         }
         return true;
     }
