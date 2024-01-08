@@ -11,7 +11,7 @@ public:
             graph[edge[0]].push_back(make_pair(edge[1], edge[2]));
         }
         
-        vector<bool> visited(n+1, false);
+        vector<bool> visited(n+1, false); //can we just say that all nodes whose distance is INT_MAX arent visited ? 
         vector<int> minDistance(n+1, INT_MAX);
         minDistance[k] = 0;
         //minHeap of <distance-from-source, node>
