@@ -1,5 +1,5 @@
 ////https://leetcode.com/problems/network-delay-time/
-//Dijkstra's Algorithm
+//Dijkstra's Algorithm - Single Source Shortest Path - No negative edges
 
 //lecture https://youtu.be/OGsPQy-lM1w?si=njOSssd9hkA35HVu 
 
