@@ -21,7 +21,6 @@ public:
         
         //source node is k, distance to k = 0
         minHeap.push(make_pair(0, k));
-        visited[k]=true;
 
         while(!minHeap.empty()){
             pair<int, int> nextNearest = minHeap.top();
