@@ -31,3 +31,34 @@ public:
         
     }
 };
+
+
+//2nd - same dp solution diff code 
+class Solution {
+public:
+    string longestPalindrome(string s) {
+        if(s.size() == 0) return "";
+        int n = s.size();
+        vector<vector<bool>> dp(n, vector<bool>(n, false));
+        int maxPalindromeLen = 0;
+        string result;
+        for(int i=n-1;i>=0;i--){
+            for(int j=0;j<n;j++) {
+                if(i>=j) {
+                    dp[i][j] = true;
+                } else {
+                    if(s[i] == s[j]) {
+                        dp[i][j] = dp[i+1][j-1];
+                    }
+                }
+
+                if(dp[i][j] == true && (j-i+1) > maxPalindromeLen) {
+                    maxPalindromeLen = j-i+1;
+                    // cout<<maxPalindromeLen<<endl;
+                    result = s.substr(i, j-i+1);
+                }
+            }
+        }
+        return result;
+    }
+};
