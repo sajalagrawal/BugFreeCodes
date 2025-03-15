@@ -2,6 +2,47 @@
 
 class Solution {
 public:
+
+    struct hashFunction { 
+        size_t operator()(const pair<int ,  
+                            int> &x) const{ 
+            return x.first ^ x.second; 
+        } 
+    }; 
+
+    int minAreaRect(vector<vector<int>>& points) {
+        unordered_set<pair<int, int>, hashFunction> st;
+        for(auto point: points) {
+            st.insert(make_pair(point[0], point[1]));
+        }
+        int minArea = INT_MAX;
+        for(int i=0;i<points.size();i++) {
+            for(int j=i+1;j<points.size();j++) {
+                if(points[i][0] == points[j][0] ||
+                    points[i][1] == points[j][1]) {
+
+                } else {
+                    int x1=points[i][0], y1=points[i][1];
+                    int x2=points[j][0], y2=points[j][1];
+
+                    pair<int,int> p3 = make_pair(x1,y2);
+                    pair<int,int> p4 = make_pair(x2,y1);
+                    if(st.find(p3) != st.end() && st.find(p4) != st.end()) {
+                        minArea = min(minArea, abs(x2-x1) * abs(y2-y1));
+                    } 
+                }
+            }
+        }
+        return minArea == INT_MAX ? 0 : minArea;
+    }
+};
+
+
+
+
+//APPROACH 2
+class Solution {
+public:
     int minAreaRect(vector<vector<int>>& points) {
         unordered_map<int, unordered_set<int>> pointsMap;
         
