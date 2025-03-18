@@ -32,7 +32,12 @@ void printPreorder(struct Node* node)
 
 // Driver code
 int main()
-{
+{    
+    /*
+        Memory Location: Allocated on the heap.
+        Lifetime: Exists until you explicitly delete it.
+        Access: Use -> (arrow operator) instead of .
+    */
     struct Node* root = new Node(1);
     root->left = new Node(2);
     root->right = new Node(3);
