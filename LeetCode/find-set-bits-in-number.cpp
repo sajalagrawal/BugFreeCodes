@@ -4,6 +4,6 @@
 
 for(int k=0;k<32;k++) {
     if(num & (1 << k)) {  // Check if the k-th bit is set
-        cout<<i<<endl;
+        cout<<k<<endl;
     }
 }
