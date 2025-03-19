@@ -1,5 +1,40 @@
 //https://leetcode.com/problems/employee-importance/
 
+
+//WITHOUT ADDITIONAL GRAPH
+/*
+// Definition for Employee.
+class Employee {
+public:
+    int id;
+    int importance;
+    vector<int> subordinates;
+};
+*/
+
+class Solution {
+public:
+    int getImportance(vector<Employee*> employees, int id) {
+        unordered_map<int, Employee*> mp;
+        for(Employee* e: employees) {
+            mp[e->id] = e;
+        }
+        return dfs(id, mp);
+    }
+
+    int dfs(int node, unordered_map<int, Employee*> mp) {
+        int ans = mp[node]->importance;
+        for(int subordinate: mp[node]->subordinates) {
+            ans += dfs(subordinate, mp);
+        }
+        return ans;
+    }
+};
+
+
+
+//WITH ADDITIONAL GRAPH
+
 /*
 // Definition for Employee.
 class Employee {
@@ -60,3 +95,4 @@ public:
     
     
 };
+
