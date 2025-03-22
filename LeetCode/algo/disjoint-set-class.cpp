@@ -22,7 +22,7 @@ public:
         int completeCount = 0;
         for (int vertex = 0; vertex < n; vertex++) {
             if (dsu.find(vertex) == vertex) {  // If vertex is root
-                int nodeCount = dsu.size[vertex];
+                int nodeCount = dsu.rank[vertex];
                 int expectedEdges = (nodeCount * (nodeCount - 1)) / 2;
                 if (edgeCount[vertex] == expectedEdges) {
                     completeCount++;
@@ -36,10 +36,10 @@ private:
     class UnionFind {
     public:
         vector<int> parent;
-        vector<int> size;  // Tracks size of each component
+        vector<int> rank;  // Tracks rank of each component
 
         // Constructor with Initializer List
-        UnionFind(int n) : parent(n, -1), size(n, 1) {}
+        UnionFind(int n) : parent(n, -1), rank(n, 1) {}
 
         // Find root of component with path compression
         int find(int node) {
@@ -59,12 +59,12 @@ private:
             }
 
             // Merge smaller component into larger one
-            if (size[root1] > size[root2]) {
+            if (rank[root1] > rank[root2]) {
                 parent[root2] = root1;
-                size[root1] += size[root2];
+                rank[root1] += rank[root2];
             } else {
                 parent[root1] = root2;
-                size[root2] += size[root1];
+                rank[root2] += rank[root1];
             }
         }
     };
