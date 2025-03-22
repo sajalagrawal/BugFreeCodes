@@ -1,3 +1,5 @@
+//https://leetcode.com/problems/count-the-number-of-complete-components/?envType=daily-question&envId=2025-03-22
+
 class Solution {
 public:
     int countCompleteComponents(int n, vector<vector<int>>& edges) {
