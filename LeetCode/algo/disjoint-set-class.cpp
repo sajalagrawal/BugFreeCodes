@@ -38,6 +38,7 @@ private:
         vector<int> parent;
         vector<int> size;  // Tracks size of each component
 
+        // Constructor with Initializer List
         UnionFind(int n) : parent(n, -1), size(n, 1) {}
 
         // Find root of component with path compression
