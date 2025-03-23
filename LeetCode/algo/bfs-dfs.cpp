@@ -105,12 +105,12 @@ public:
             //adding this edge creates a cycle
             return;
         }
-        if(rank[nodeA] >= rank[nodeB]){
+        if(rank[parentA] >= rank[parentB]){
             parent[parentB] = parentA;
-            rank[parentA]++;
+            rank[parentA] += rank[parentB];
         }else{
             parent[parentA] = parentB;
-            rank[parentB]++;
+            rank[parentB] += rank[parentA];
         }
         return;
     }
