@@ -26,6 +26,9 @@ public:
             pair<int, int> nextNearest = minHeap.top();
             minHeap.pop();
             int u = nextNearest.second;
+
+            //optimization?? - u is already processed before with a lesser distance so no need to revisit u
+            if(visited[u]=true) continue;
             visited[u]=true;
             
             //each connection u->v is a pair<int, int>
