@@ -11,8 +11,8 @@ public:
 
     int findParent(int node) {
         if(parent[node] == -1) return node;
-        int p = findParent(parent[node]);
-        return p;
+        parent[node] = findParent(parent[node]);
+        return parent[node];
     }
 
     void unionByRank(int a, int b) {
