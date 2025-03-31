@@ -93,7 +93,7 @@ string decodeString(HuffmanNode* root, const string& encodedStr) {
 
 // Main function
 int main() {
-    string text = "hello huffman"; // Input text to be encoded
+    string text = "aaaabbbccd"; // Input text to be encoded
     
     // Step 1: Calculate frequency of each character
     unordered_map<char, int> freqMap;
@@ -125,20 +125,17 @@ int main() {
 }
 
 
+
 /*
 
 Huffman Codes:
-h -> 00
-e -> 01
-l -> 10
-o -> 110
-  -> 1110
-u -> 11110
-f -> 11111
-m -> 101
+c -> 111
+d -> 110
+b -> 10
+a -> 0
 
-Encoded String: 000110101011111011111010000
+Encoded String: 0000101010111111110
 
-Decoded String: hello huffman
+Decoded String: aaaabbbccd
 
 */
