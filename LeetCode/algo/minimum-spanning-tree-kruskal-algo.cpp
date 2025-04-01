@@ -6,8 +6,8 @@ private:
         if(parent[node] == -1) {
             return node;
         }
-        int p = findParent(parent[node], parent);
-        return p;
+        int parent[node] = findParent(parent[node], parent);
+        return parent[node];
     }
 
     bool unionByRank(int u, int v, vector<int>& parent, vector<int>& rank) {
