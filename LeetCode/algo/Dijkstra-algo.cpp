@@ -26,7 +26,7 @@ public:
             pair<int, int> nextNearest = minHeap.top();
             minHeap.pop();
             int u = nextNearest.second;
-
+            int dis = nextNearest.first;
             //optimization?? - u is already processed before with a lesser distance so no need to revisit u
             if(visited[u]=true) continue;
             visited[u]=true;
@@ -36,8 +36,8 @@ public:
                 int v = connection.first;
                 int wt = connection.second;
                 if(!visited[v]){
-                    if (minDistance[v] > minDistance[u] + wt) {
-                        minDistance[v] = minDistance[u] + wt;
+                    if (minDistance[v] > dis + wt) {
+                        minDistance[v] = dis + wt;
                         minHeap.push(make_pair(minDistance[v], v));
                     }
                 }
