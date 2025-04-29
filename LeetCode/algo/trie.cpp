@@ -3,11 +3,11 @@
 //good reference - https://takeuforward.org/data-structure/implement-trie-1/
 
 class Node {
-public:
-    
+private:
     Node* links[26];
     bool end = false;
 
+public: 
     //ideally we should do this - compiler might set all links[] to NULL on: new Node();
     Node() {
         for (int i = 0; i < 26; ++i) {
