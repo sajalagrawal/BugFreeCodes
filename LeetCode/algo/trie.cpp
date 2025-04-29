@@ -8,6 +8,13 @@ public:
     Node* links[26];
     bool end = false;
 
+    //ideally we should do this - compiler might set all links[] to NULL on: new Node();
+    Node() {
+        for (int i = 0; i < 26; ++i) {
+            links[i] = nullptr;
+        }
+    }
+
     bool containsKey(char ch) {
         return links[ch - 'a'] != NULL;
     }
