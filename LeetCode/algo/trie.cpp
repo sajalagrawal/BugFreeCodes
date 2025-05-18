@@ -8,7 +8,7 @@ private:
     bool end = false;
 
 public: 
-    //ideally we should do this - compiler might set all links[] to NULL on: new Node();
+    //ideally we should do this - compiler may/may not set all links[] to NULL on: new Node();
     Node() {
         for (int i = 0; i < 26; ++i) {
             links[i] = nullptr;
