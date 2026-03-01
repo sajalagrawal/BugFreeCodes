@@ -5,6 +5,58 @@ int[][] arr = new int[rows][cols];
 for(int i=0; i<arr.length;i++) { }
 -----------------------------------------------------------------------------------------------
 
+
+Map<Integer, Integer> map = new HashMap<>();      // most used (O(1))
+Map<Integer, Integer> tree = new TreeMap<>();     // sorted (O(log n))
+Map<Integer, Integer> linked = new LinkedHashMap<>(); // insertion order
+
+map.put(1, 10);        // insert / update
+map.get(1);            // get value
+map.getOrDefault(2, 0);
+map.containsKey(1);
+map.containsValue(10);
+map.remove(1);
+map.size();
+map.isEmpty();
+
+//iterate map with keys
+for (int key : map.keySet()) { }
+
+//iterate map with values
+for (int val : map.values()) { }
+
+//iterate map with keys + values
+for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
+    int key = entry.getKey();
+    int val = entry.getValue();
+}
+
+//Update / Count Pattern (VERY COMMON)
+map.put(x, map.getOrDefault(x, 0) + 1);
+
+map.putIfAbsent(key, new ArrayList<>());
+
+//computeIfAbsent (Graph / grouping)
+map.computeIfAbsent(key, k -> new ArrayList<>()).add(value);
+
+map.remove(key);             // remove key
+map.remove(key, value);      // remove only if matches
+
+//Graphs using Map
+Map<Integer, List<Integer>> graph = new HashMap<>();
+//add edge - directed graph
+graph.computeIfAbsent(u, k -> new ArrayList<>()).add(v);
+
+//add edge - UNdirected graph
+graph.computeIfAbsent(u, k -> new ArrayList<>()).add(v);
+graph.computeIfAbsent(v, k -> new ArrayList<>()).add(u);
+
+//iterate neighbors
+for (int nei : graph.getOrDefault(u, new ArrayList<>())) {
+    // process nei
+}
+-----------------------------------------------------------------------------------------------
+
 Set<Integer> set = new HashSet<>();
 Set<Integer> set2 = new TreeSet<>(); // sorted
 Set<Integer> set3 = new LinkedHashSet<>(); // insertion order
