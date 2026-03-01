@@ -2,7 +2,7 @@
 
 
 int[][] arr = new int[rows][cols];
-
+for(int i=0; i<arr.length;i++) { }
 -----------------------------------------------------------------------------------------------
 
 Set<Integer> set = new HashSet<>();
@@ -32,9 +32,9 @@ q.size();
 -----------------------------------------------------------------------------------------------
 
 PriorityQueue<Integer> pq = new PriorityQueue<>();
-pq.offer(3);
-pq.poll();
-pq.peek();
+pq.offer(3); //Inserts the specified element into this priority queue.
+pq.poll();   //Retrieves and removes the head of this queue or returns null if this queue is empty.
+pq.peek();   //Retrieves, but does not remove, the head of this queue or returns null if this queue is empty.
 
 
 
@@ -56,6 +56,8 @@ PriorityQueue<Pair> pq = new PriorityQueue<>(
         return Integer.compare(a.second, b.second);
     }
 );
+
+pq.add(new Pair(1, 2));
 -----------------------------------------------------------------------------------------------
 
 Deque<Integer> stack = new ArrayDeque<>();
