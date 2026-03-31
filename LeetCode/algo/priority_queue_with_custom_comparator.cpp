@@ -7,6 +7,15 @@ public:
 
 priority_queue<int, vector<int>, Compare> pq;
 
+
+struct Compare {
+    bool operator()(pair<int,int> a, pair<int,int> b) {
+        return a.second > b.second;  // min heap by end time
+    }
+};
+
+priority_queue<pair<int,int>, vector<pair<int,int>>, Compare> pq;
+
 ------------------------------------------------------------------------------------------
 
 
