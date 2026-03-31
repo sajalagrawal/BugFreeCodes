@@ -1,3 +1,15 @@
+class Compare {
+public:
+    bool operator()(int a, int b) {
+        return a > b;  // min heap
+    }
+};
+
+priority_queue<int, vector<int>, Compare> pq;
+
+------------------------------------------------------------------------------------------
+
+
 //reference https://leetcode.com/problems/find-minimum-time-to-reach-last-room-i/editorial/
 
 class State {
