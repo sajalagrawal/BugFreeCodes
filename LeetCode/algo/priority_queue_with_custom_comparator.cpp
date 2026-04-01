@@ -7,7 +7,7 @@ public:
 
 priority_queue<int, vector<int>, Compare> pq;
 
-
+// ^ same thing can be achieved using struct instead of class
 struct Compare {
     bool operator()(pair<int,int> a, pair<int,int> b) {
         return a.second > b.second;  // min heap by second value in pair<int, int> 
