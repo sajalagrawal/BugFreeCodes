@@ -5,7 +5,7 @@ public:
     vector<int> parent;
     vector<int> rank;
 
-    DisjointUnion(int n) : parent(n, -1), rank(n, 1) {
+    DisjointUnion(int n) : parent(n, -1), rank(n, 1) { //constructor initializer list
 
     }
 
