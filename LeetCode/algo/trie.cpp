@@ -8,7 +8,7 @@ private:
     bool end = false;
 
 public: 
-    Node() {
+    Node() { // ❌ unnecessary
         
     }
 
