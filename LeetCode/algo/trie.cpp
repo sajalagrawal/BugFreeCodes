@@ -4,15 +4,12 @@
 
 class Node {
 private:
-    Node* links[26];
+    Node* links[26] = {}; // auto-initialize to nullptr - value initialization using brace initialization (introduced in C++11)
     bool end = false;
 
 public: 
-    //ideally we should do this - compiler may/may not set all links[] to NULL on: new Node();
     Node() {
-        for (int i = 0; i < 26; ++i) {
-            links[i] = nullptr;
-        }
+        
     }
 
     bool containsKey(char ch) {
